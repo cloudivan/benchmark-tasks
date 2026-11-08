@@ -1,0 +1,25 @@
+{
+  "title": "Put trousers and a silk blouse on their own hangers, and the knitted sweater on the shelf",
+  "category": "Societal relevance",
+  "keywords": [
+    "laundry",
+    "clothes hanger",
+    "garment care",
+    "wardrobe",
+    "household",
+    "matching",
+    "balance",
+    "bimanual",
+    "pick and place",
+    "release"
+  ],
+  "instruction": "Put the clean laundry away: lay the trousers across the bar of the wooden trouser hanger and the silk blouse across the bar of the pink padded hanger, each with its middle on the bar, and lay the wool sweater flat on the shelf, because knits stretch out of shape on a hanger. Then let go of each one.",
+  "context": "Putting laundry away means matching each garment to the right storage: trousers folded over a trouser hanger's bar, delicate silk on a padded hanger so it doesn't crease or mark, and knitwear folded on a shelf because its own weight stretches it on a hanger. A garment laid over a bar off its middle slides off, so the placement has to be balanced as well as on the right hanger.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (bases at y = +30.5 left and -30.5 right): x forward, y to the left, heights above the table top. Fixed: a grey clothes rail 48 cm long along y at x 30, 22 cm above the table, on two posts at y +23.5 and -23.5. Two open-ended hangers hang from it, each a bar running left-right with its top face 10 cm above the table, held at its outer end by a thin grey hook stem (0.6 x 0.6 cm) rising to the rail: a varnished wooden trouser hanger, bar 2.5 (x) x 10 (y) x 1.2 cm, centred at x 30, y +10, stem at its left end; and a pink satin padded hanger, bar 3 x 10 x 2.2 cm, centred at x 30, y -10, stem at its right end. A white shelf block 12 x 12 x 4 cm tall centred at x 22, y 0. Loose, three folded garments, each a rigid fabric block lying flat with its long side along x, centred at x 17: navy cotton trousers 14 x 4.5 x 2.0 cm, 100 g, at y +10; an ivory silk blouse 12 x 4.5 x 1.6 cm, 40 g, at y -10; a grey wool knitted sweater 8 x 5 x 2.5 cm, 120 g, at y +20.",
+  "scoring": "Hard 0 if any garment ends with its lowest point more than 5 cm below the table top (fell off the table). Otherwise score = 0.9 x max(0, C/3 - W/3): C = garments at their right place, W = garments at a wrong one (the other hanger, or the shelf). On a hanger: lying across its bar (long axis within 15 degrees of x, tilt under 10 degrees), underside within 5 mm of the bar's top face, centre over the bar (within its 2.5 or 3 cm front-back width) and the garment's whole width within the bar's 10 cm length. On the shelf: tilt under 10 degrees, underside within 5 mm of the shelf top and wholly over it. Right places: trousers on the trouser hanger, blouse on the padded hanger, sweater on the shelf. Swapping the two garments between the hangers scores 0. 1.0 requires all three at their right places, all still (under 1 cm/s and 0.5 rad/s) and every fingertip of both grippers at least 3 cm from every garment, held for 1 s.",
+  "run_limit": "1,200 steps (60 seconds at 20 Hz)",
+  "reset_notes": "Nothing is consumed. In a real trial, fix the rail, the hangers and the shelf. Take the garments off the hangers and the shelf and lay them back on the table as in the setup.",
+  "fidelity": "Garments are rigid folded blocks at about 1/3 scale, so the 9.4 cm gripper can hold one across its width; task files have no cloth, so a garment lies across a bar like folded trousers but can't drape or slide into a fold. Hangers are fixed rigid bars with their hooks fixed to the rail. The care rules are common laundry practice. Friction is the simulator default. Release is checked from fingertip positions by forward kinematics.",
+  "scores": "Dream-1 run: 0.0 (the left arm reached out and hovered over the garments for the full 60 seconds and the right arm barely moved; no garment was picked up); scripted demo: 1.0 (3 of 3 runs)",
+  "media": "M-H2T2YN"
+}
