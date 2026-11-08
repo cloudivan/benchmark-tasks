@@ -1,0 +1,25 @@
+{
+  "title": "Hang a coat, a shirt and a child's hanger on the rack arms each one fits",
+  "category": "Impact on jobs",
+  "keywords": [
+    "laundry",
+    "dry cleaning",
+    "clothes hanger",
+    "garment rack",
+    "size matching",
+    "fit by measurement",
+    "bimanual",
+    "pick and place",
+    "precise placement",
+    "release"
+  ],
+  "instruction": "Hang each hanger on the pair of rack arms it fits: lay its bar across both cradles of that pair, pointing away from you, with neither end sticking out more than 1.5 cm past the arms, then let go of it.",
+  "context": "Laundries and dry cleaners hang finished garments on pickup racks whose arms are spaced for one hanger type each: a coat hanger, an adult shirt hanger and a child's hanger. A hanger too short for its arms drops the garment on the floor, and one too long sticks out into the next garment's space. The robot has to judge each hanger's length against the gaps between the arms, then place it precisely in two narrow cradles at once.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (bases at y = +30.5 left and -30.5 right): x forward, y to the left, heights above the table top. Fixed: a grey pickup rack of three pairs of arms, all centred on x 30. Each arm is a post 1.5 (x) x 3 (y) x 10 cm tall standing on the table, with a cradle on top: two lips 1.5 x 0.5 x 1.2 cm, left and right of the post's top face, 2 cm apart. A pair's two arms stand one behind the other along x. Narrow pair (child's hangers): centred on y +20, posts at x 27 and 33 (inner gap 4.5 cm, outer span 7.5 cm). Middle pair (shirt hangers): y +6, posts at x 25 and 35 (gap 8.5, span 11.5). Wide pair (coat hangers): y -14, posts at x 23 and 37 (gap 12.5, span 15.5). Loose: three hangers, each represented by its shoulder bar, a rigid flat box standing on its narrow edge on the table, long side along x, centred at x 16: a dark brown wooden coat hanger bar 16 x 1.6 x 3.0 cm tall, 150 g, at y -10; a white plastic shirt hanger bar 12 x 1.4 x 2.6 cm, 60 g, at y +16; a pink plastic child's hanger bar 8 x 1.2 x 2.2 cm, 30 g, at y +4. Each hanger fits exactly one pair: a shorter bar falls between a wider pair's arms, and a longer bar overhangs a narrower pair's arms by 2.25 cm or more.",
+  "scoring": "Hard 0 if any hanger ends with its lowest point more than 5 cm below the table top (fell off the table). Otherwise score = 0.9 x H/3, H = hangers hung on the pair they fit. A hanger is hung on a pair when its long axis is within 5 degrees of x and level (within 5 degrees), its centre is within 1 cm of the pair's centre line (y) and of the pair's middle (x 30), its underside is within 4 mm of the cradle floors (10 cm above the table, so not resting on the lips), and each end overhangs the pair's arms by no more than 1.5 cm. A hanger on a pair it does not fit never counts. Doing nothing scores 0. 1.0 requires all three hung on the pairs they fit, all still (under 1 cm/s and 0.5 rad/s) and every fingertip of both grippers at least 3 cm from every hanger, held for 1 s.",
+  "run_limit": "1,200 steps (60 seconds at 20 Hz)",
+  "reset_notes": "Nothing is consumed. In a real trial, fix the rack to the table. Lift the three hangers off the rack and stand them back on the table as in the setup.",
+  "fidelity": "Each hanger is its rigid shoulder bar at about 1/3 scale, so the 9.4 cm gripper can hold it across its thickness; the hook and the garment are not modelled (task files have no cloth and no linked parts), so the bar rests in two cradles as a hanger rests on two rack arms. The rack is fixed. Friction is the simulator default. Release is checked from fingertip positions by forward kinematics.",
+  "scores": "Dream-1 run: 0.0 (the right arm picked up the coat hanger and moved it about near the rack for the full 60 seconds but never laid it in a pair of cradles; the left arm stayed still and the other two hangers were not moved); scripted demo: 1.0 (3 of 3 runs)",
+  "media": "M-CC5ZLN"
+}
