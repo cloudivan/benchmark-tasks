@@ -1,0 +1,25 @@
+{
+  "title": "Pack three pairs of socks flat into a drawer so that it closes",
+  "category": "Societal relevance",
+  "keywords": [
+    "wardrobe",
+    "chest of drawers",
+    "socks",
+    "laundry",
+    "household",
+    "packing",
+    "clearance",
+    "articulated furniture",
+    "bimanual",
+    "pushing"
+  ],
+  "instruction": "Put the three pairs of socks in the drawer and close it, then let go.",
+  "context": "Putting socks away means laying them in the drawer so that it still shuts: a pair stacked on another or stood on end is taller than the gap under the chest's top, catches on the front edge and is pushed off as the drawer closes, the everyday problem of an overfull drawer. The robot has to fill the open part of the drawer in a single layer and then push the drawer home.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (bases at y = +30.5 left and -30.5 right): x forward, y to the left, heights above the table top. Fixed, a low wooden chest open towards the arms: side walls 1 cm thick, 4.6 cm tall, inner faces at y +8.3 and -8.3, from x 26 to 39; a back wall with its front face at x 38 (12 cm inside); a top 13 (x) x 18.6 (y) x 1.2 cm whose underside is 4.6 cm above the table. Loose: the drawer, a solid light wooden block 15 (x) x 16 (y) x 2 cm, 200 g, standing for the drawer's floor and front, on the table between the side walls, pulled 8 cm out: front face at x 15, back face at x 30. Closed, its back is against the back wall and its front 3 cm stand out of the chest (front face at x 23), like a drawer's front panel. Between the drawer's top and the chest's top there are 2.6 cm: room for one layer of socks. Three rolled pairs of socks, each a rigid fabric block 4 (x) x 3 (y) x 2 cm, 30 g, lying flat with the long side along x: navy at x 15, y +17; grey at x 21, y +17; red at x 17, y -17.",
+  "scoring": "Hard 0 if the drawer or a pair of socks falls off the table (lowest point more than 5 cm below the table top). Otherwise score = 0.9 x (0.2 N + 0.4 C): N = pairs resting on the drawer (underside within 5 mm of the drawer's top and wholly over it, wherever the drawer is), C = 1 if the drawer is closed (pushed home: back face within 5 mm of the back wall, tilted under 10 degrees) with all three pairs on it and wholly inside the chest (behind its front at x 26), else 0. A pair stacked on another pair or left on the chest's top is not on the drawer; closing the drawer on a stacked or upright pair scrapes it off on the chest's front edge, so it stops counting; a pair left on the drawer's front 3 cm stays outside the closed chest. Doing nothing scores 0; closing the empty drawer scores 0. 1.0 requires all three on the closed drawer inside the chest, everything still (under 1 cm/s and 0.5 rad/s) and every fingertip of both grippers at least 3 cm from the drawer and the socks, held for 1 s.",
+  "run_limit": "1,600 steps (80 seconds at 20 Hz)",
+  "reset_notes": "Nothing is consumed. In a real trial, fix the chest to the table. Pull the drawer out to the 8 cm mark and put the socks back on the table as in the setup.",
+  "fidelity": "About 1/3 scale. The drawer is one solid block standing for its floor and front (a task file can't join boxes, so it has no sides); the socks ride on its top and are rigid blocks, not soft rolls, so a stacked pair can't squash to fit. The chest is fixed. Friction is the simulator default. Release is checked from fingertip positions by forward kinematics.",
+  "scores": "Dream-1 run: 0.0 (the right arm picked up the red pair and moved it about near the drawer for the full 80 seconds without setting it on the drawer; the left arm barely moved and the drawer stayed open); scripted demo: 1.0 (3 of 3 runs)",
+  "media": "M-5JF4V7"
+}
